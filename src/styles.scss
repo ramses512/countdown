@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./styles/material-theme";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+router-outlet {
+  min-height: 150vh;
+}
+.content {
+  min-height: calc(100vh - 120px);
+}
+.text-centered {
+  text-align: center;
+}
+.mat-card {
+  cursor: pointer;
+}
+.mr-25 {
+  margin: 25px;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
