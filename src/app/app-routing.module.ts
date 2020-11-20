@@ -16,7 +16,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       {
-        path: 'countdown',
+        path: 'welcome',
         loadChildren: () =>
           import('@modules/countdown/countdown.module').then(
             (m) => m.CountdownModule
