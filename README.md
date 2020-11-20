@@ -11,14 +11,15 @@ npm i
 npm start
 ```
 
-## How to run test
+
+## Users Mock
 
 ```
-npm run webdriver-update
-npm run e2e
-npm test
+Email: test@gmail.com 
+Password: test
+Email: test2@gmail.com 
+Password: test2
 ```
-
 ## How to generate documentation
 
 ```
@@ -27,17 +28,18 @@ npm run compodoc
 
 ## Next feautures
 
-- [x] Do e2e test
+- [X] PWA
+- [X] Mock Back
+- [X] Clean code
+- [ ] Do unit test
+- [ ] Do e2e test
 - [ ] Akita/NgRx (Not recommended for this demo)
 
 ## Screenshots
 
-<p align="center"><p align="center">Login</p><a width="600px" href="https://ibb.co/x1cLGmJ"><img src="https://i.ibb.co/pfswZWJ/login.png" alt="login" border="0"></a></p>
-<p align="center"><p align="center">Transactions</p><a width="600px" href="https://ibb.co/HhXMCx3"><img src="https://i.ibb.co/1zbpMdj/transactions.png" alt="transactions" border="0"></a></p>
+<p align="center"><p align="center">Login</p><a width="600px" href="https://ibb.co/x1cLGmJ"><img src="https://i.ibb.co/R9V0MmJ/1.png" alt="login" border="0"></a></p>
+<p align="center"><p align="center">Countdown</p><a width="600px" href="https://i.ibb.co/CsmbJX1/2.png"><img src="https://i.ibb.co/CsmbJX1/2.png" alt="transactions" border="0"></a></p>
 </p>
-<p align="center"><p align="center">Test coverage</p><a width="600px" href="https://ibb.co/41zMwcq"><img src="https://i.ibb.co/LNm6DMF/coberture.png" alt="coverage" border="0"></a>
+<p align="center"><p align="center">Lighthouse</p><a width="600px" href="https://i.ibb.co/pQcK3vg/3.png"><img src="https://i.ibb.co/pQcK3vg/3.png" alt="coverage" border="0"></a>
 </p>
-<p align="center"><p align="center">Test coverage e2e</p><a width="600px" href="https://ibb.co/vYK2Nyf"><img src="https://i.ibb.co/fvPm36Z/cucumber.png" alt="cucumber" border="0"></a>
-</p>
-<p align="center"><p align="center">Documentation</p><a width="600px" href="https://ibb.co/C2TTbDf"><img src="https://i.ibb.co/GTbbWNq/documentation.png" alt="documentation" border="0"></a>
-</p>
+
