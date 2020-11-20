@@ -35,7 +35,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { paramsInheritanceStrategy: 'always' }), // To get the lazy modules routing params
+    RouterModule.forRoot(routes, { paramsInheritanceStrategy: 'always',  useHash: true  }), // To get the lazy modules routing params
   ],
   exports: [RouterModule],
 })

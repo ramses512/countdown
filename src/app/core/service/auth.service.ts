@@ -29,11 +29,11 @@ export class AuthService {
           this.tokenSubject.next(res.token);
           localStorage.setItem('token', JSON.stringify(res.token));
           localStorage.setItem('userId', JSON.stringify(res.id));
-          this.router.navigate(['/countdown']);
+          this.router.navigate(['/welcome']);
         }
       })
     );
-  }
+  }WS
   public logout(): void {
     const id = localStorage.getItem('userId');
     this.apiService.put(`/user/${id}`).subscribe()

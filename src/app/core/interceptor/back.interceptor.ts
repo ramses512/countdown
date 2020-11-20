@@ -45,14 +45,14 @@ export class FakeBackendInterceptor implements HttpInterceptor {
           id: 1,
           email: 'test@gmail.com',
           password: 'test',
-          lastLogin: new Date(),
+          lastLogin: '',
           token: 'fake-jwt-token',
         },
         {
           id: 2,
           email: 'test2@gmail.com',
           password: 'test2',
-          lastLogin: new Date(),
+          lastLogin: '',
           token: 'fake-jwt-token',
         },
       ];
@@ -66,7 +66,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
       return ok({
         id: user.id,
         email: user.email,
-        lastLogin: new Date(),
+        lastLogin: user.lastLogin,
         token: 'fake-jwt-token',
       });
     }
