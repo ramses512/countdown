@@ -1,4 +1,23 @@
 <section class="countdown">
   <h1 class="center">Welcome!</h1>
   <h6 class="center">The last time you accessed was</h6>
+  <article class="box">
+    <section class="result" *ngIf="dateObj">
+      <p class="days">{{dateObj.days}} <span>days</span></p>
+      <p class="hours">{{dateObj.hours}} <span>hours</span></p>
+      <p class="minutes">{{dateObj.minutes}} <span>minutes</span></p>
+      <p class="seconds">{{dateObj.seconds}} <span>seconds</span></p>
+    </section>
+    <div class="button">
+      <button
+        id="btnSubmit"
+        type="submit"
+        mat-raised-button
+        color="primary"
+        (click)="logout()"
+      >
+        Logout
+      </button>
+    </div>
+  </article>
 </section>

@@ -28,9 +28,20 @@ export class AuthService {
         if (res.token) {
           this.tokenSubject.next(res.token);
           localStorage.setItem('token', JSON.stringify(res.token));
+          localStorage.setItem('userId', JSON.stringify(res.id));
           this.router.navigate(['/countdown']);
         }
       })
     );
+  }
+  public logout(): void {
+    const id = localStorage.getItem('userId');
+    this.apiService.put(`/user/${id}`).subscribe()
+    localStorage.removeItem('token');
+    localStorage.removeItem('userId');
+    this.tokenSubject.next(null);
+    this.tokenSubject.complete();
+    this.router.navigate(['/login']);
+
   }
 }

@@ -1,0 +1,28 @@
+.result {
+  display: flex;
+  gap: 20px;
+  font-size: 3em;
+}
+
+.result p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result p span {
+  font-size: 0.5em;
+  color: rgb(102, 102, 102);
+  margin-top: 10px;
+
+}
+.box{
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  margin: 0 auto;
+  font-size: min(2vw, 1rem);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

@@ -42,4 +42,23 @@ export class ApiService {
       options
     );
   }
+   /**
+   *
+   *
+   * @param {string} path
+   * @param {Object} [body={}]
+   * @returns {Observable<any>}
+   * @memberof ApiService
+   */
+  public put(path: string, body: Object = {}): Observable<any> {
+    const options = {
+      headers: new HttpHeaders().set('Content-Type', 'application/json')
+    };
+    return this.http.put(
+      `${path}`,
+      JSON.stringify(body),
+      options
+    );
+    /* .pipe(catchError(this.formatErrors)); */
+  }
 }
