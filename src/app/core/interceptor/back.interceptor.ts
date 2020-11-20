@@ -20,18 +20,19 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     const { url, method, headers, body } = request;
-console.log(request);
+    console.log(request);
     // wrap in delayed observable to simulate server api call
-    return of(null)
-      .pipe(mergeMap(handleRoute))
-      .pipe(delay(500))
+    return of(null).pipe(mergeMap(handleRoute)).pipe(delay(500));
 
     function handleRoute() {
       switch (true) {
         case url.endsWith('/login') && method === 'POST':
           return authenticate();
+        case url.match(/\/user\/\d+$/) && method === 'GET':
+          return getUserById();
+        case url.match(/\/user\/\d+$/) && method === 'PUT':
+          return updateUser();
         default:
-          // pass through any requests not handled above
           return next.handle(request);
       }
     }
@@ -41,8 +42,16 @@ console.log(request);
     function authenticate() {
       const users = [
         {
+          id: 1,
           email: 'test@gmail.com',
           password: 'test',
+          lastLogin: new Date(),
+          token: 'fake-jwt-token',
+        },
+        {
+          id: 2,
+          email: 'test2@gmail.com',
+          password: 'test2',
           lastLogin: new Date(),
           token: 'fake-jwt-token',
         },
@@ -55,6 +64,7 @@ console.log(request);
       );
       if (!user) return error('Email or password is incorrect');
       return ok({
+        id: user.id,
         email: user.email,
         lastLogin: new Date(),
         token: 'fake-jwt-token',
@@ -76,7 +86,19 @@ console.log(request);
     function isLoggedIn() {
       return headers.get('Authorization') === 'Bearer fake-jwt-token';
     }
+    function getUserById() {
+      if (!isLoggedIn()) return unauthorized();
 
+      const user = users.find((x) => x.id == idFromUrl());
+      return ok(user);
+    }
+    function updateUser() {
+      if (!isLoggedIn()) return unauthorized();
+      const foundIndex = users.findIndex(x => x.id === idFromUrl());
+      users[foundIndex].lastLogin =  new Date();
+      localStorage.setItem('users', JSON.stringify(users));
+      return ok();
+  }
     function idFromUrl() {
       const urlParts = url.split('/');
       return parseInt(urlParts[urlParts.length - 1]);

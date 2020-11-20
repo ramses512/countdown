@@ -11,6 +11,8 @@ import { ContentComponent } from '@layout/content/content.component';
 import { HeaderComponent } from '@layout/header/header.component';
 import { SharedModule } from '@shared/shared.module';
 import { fakeBackendProvider } from '@app/interceptor/back.interceptor';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { fakeBackendProvider } from '@app/interceptor/back.interceptor';
     SharedModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     {
