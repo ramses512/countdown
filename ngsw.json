@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1605889671353,
+  "timestamp": 1605889906710,
   "index": "https://ramses512.github.io/countdown/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "https://ramses512.github.io/countdown/5.6c674f57ec657f914497.js",
         "https://ramses512.github.io/countdown/favicon.ico",
         "https://ramses512.github.io/countdown/index.html",
-        "https://ramses512.github.io/countdown/main.33acc695944e88e9366c.js",
+        "https://ramses512.github.io/countdown/main.c003c763d2c86f23290e.js",
         "https://ramses512.github.io/countdown/manifest.webmanifest",
         "https://ramses512.github.io/countdown/polyfills.35a5ca1855eb057f016a.js",
         "https://ramses512.github.io/countdown/runtime.be0545c7d5fe328b1645.js",
@@ -56,8 +56,8 @@
     "https://ramses512.github.io/countdown/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://ramses512.github.io/countdown/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://ramses512.github.io/countdown/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://ramses512.github.io/countdown/index.html": "c35c69ed56552f7f92df69e286666103988e22eb",
-    "https://ramses512.github.io/countdown/main.33acc695944e88e9366c.js": "01dda00c3ba46ad348ed96c5573a44eaf177eb92",
+    "https://ramses512.github.io/countdown/index.html": "5152972bf8d2d8b393ba17238145b516ac5bff9c",
+    "https://ramses512.github.io/countdown/main.c003c763d2c86f23290e.js": "c5d7b12e17da30333aaaac509e00c6f6664fc5d5",
     "https://ramses512.github.io/countdown/manifest.webmanifest": "abd51a6d0a312f5b28c3a3470bedd8d45f6c9435",
     "https://ramses512.github.io/countdown/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
     "https://ramses512.github.io/countdown/runtime.be0545c7d5fe328b1645.js": "27c978a648f1b4c55a21edbbebe64905c9eb47a5",
