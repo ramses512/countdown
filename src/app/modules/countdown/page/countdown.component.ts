@@ -23,6 +23,7 @@ export class CountdownComponent implements OnInit {
     });
   }
   calculateDiff(data) {
+    console.log(data)
     if (data.lastLogin) {
       let date = new Date(data.lastLogin);
       let currentDate = new Date();

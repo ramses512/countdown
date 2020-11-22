@@ -40,7 +40,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     // route functions
 
     function authenticate() {
-      const users = [
+      let users = [
         {
           id: 1,
           email: 'test@gmail.com',
@@ -56,9 +56,12 @@ export class FakeBackendInterceptor implements HttpInterceptor {
           token: 'fake-jwt-token',
         },
       ];
-      localStorage.setItem('users', JSON.stringify(users));
+      if(!localStorage.getItem('users')){
+        localStorage.setItem('users', JSON.stringify(users));
+      }else{
+        users = JSON.parse(localStorage.getItem('users'));
+      }
       const { email, password } = JSON.parse(body);
-      console.log(email);
       const user = users.find(
         (x) => x.email === email && x.password === password
       );
